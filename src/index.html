@@ -3,54 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
+    <title>Wbpack Exercise</title>
 </head>
 <body>
     <div class="container">
     <h1>Leaderboard</h1>
     
-    <section class="rec_scores">
+    <section class="rec_scores" id="secContainer">
     <h2>Recent scores</h2>
-    <input class="refBtn" type="button" value="Refresh">
-    <div class="scores">
-        <table>
-            <tr><td>Name:</td>
-                <td>100</td>
-            </tr>
+    <input class="refBtn" id="refId" type="button" value="Refresh">
+    <div class="scores" >
+        <table id="sc">
             
-            <tr><td>Name:</td>
-                <td>34</td>
-            </tr>
-            
-            <tr><td>Name:</td>
-                <td>90</td>
-            </tr>
-            
-            <tr><td>Name:</td>
-                <td>78</td>
-            </tr>
-            
-            <tr><td>Name:</td>
-                <td>125</td>
-            </tr>
-            
-            <tr><td>Name:</td>
-                <td>77</td>
-            </tr>
-            
-            <tr><td>Name:</td>
-                <td>49</td>
-            </tr>
         </table>
     </div>
 </section>
 <section class="add_score">
     <h2>Add your score</h2>
-    <form action="">
-    <input type="text" class="inptxt" id="inpId" onfocus="this.value=''" Value="Your name" ><br><br>
-    <input type="text" class="inptxt" id="inpId" onfocus="this.value=''" Value="Your score" ><br><br>
-    <input class="subBtn"type="submit" value="Submit">
-    </form>
+    <br>
+    
+    <label><strong>Name :</strong></label><input type="text" class="inptxt" id="inpIdName" placeholder="Your Name"  maxlength="18"><br><br>
+    <label><strong>Score :</strong></label><input type="number" class="inptxt" id="inpIdScore" placeholder="Your Score" max="999"><br><br>
+    <input id="submitBtn"class="subBtn"type="submit" value="Submit">
+    
 </section>
 </div>
 
