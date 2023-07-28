@@ -3,40 +3,32 @@ const name = document.getElementById('inpIdName');
 const score = document.getElementById('inpIdScore');
 const submit = document.getElementById('submitBtn');
 
-let gid = [];
-
 const enterData = () => {
   name.value = '';
   score.value = '';
-
-  submit.addEventListener('click', () => {
+  let gid = '';
+  submit.addEventListener('click', async () => {
     if (name.value && score.value) {
-      fetch(urlPOST, {
-        method: 'POST',
-        body: JSON.stringify({
-          user: name.value,
-          score: score.value,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('From POST: Network response was not ok');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          gid = data.result;
-          console.log(gid);
-          name.value = '';
-          score.value = '';
-        })
-        .catch((error) => {
-          console.error('Error:', error);
+      try {
+        const response = await fetch(urlPOST, {
+          method: 'POST',
+          body: JSON.stringify({
+            user: name.value,
+            score: score.value,
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
         });
+        const data = await response.json();
+        gid = data.result;
+        name.value = '';
+        score.value = '';
+      } catch (error) {
+        return error;
+      }
     }
+    return gid;
   });
 };
 
