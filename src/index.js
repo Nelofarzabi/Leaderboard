@@ -1,18 +1,12 @@
 import './style.css';
+import getdata from '../modules/getData.js';
+import enterData from '../modules/enterData.js';
 
-let gid = [];
-const p = fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:id/scores/', {
-  method: 'POST',
-  body: JSON.stringify({
-    name: 'faisal',
-  }),
+const ref = document.getElementById('refId');
 
-  // Adding headers to the request
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
+ref.addEventListener('click', () => {
+  window.location.reload();
 });
 
-const data = p.JSON();
-gid = (data.result).split('');
-console.log(gid[2]);
+getdata();
+enterData();
