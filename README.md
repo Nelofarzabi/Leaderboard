@@ -1,6 +1,3 @@
-Hello, I am:
-
-- Nelofar Zabi
 
 <a name="readme-top"></a>
 
