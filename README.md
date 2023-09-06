@@ -53,7 +53,7 @@ GitHub & Visual Studio Code
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming Soon]
+[Live Demo](https://nelofarzabi.github.io/Leaderboard/dist/)
 
 <p align="right">(<a href="https://github.com/faisalakb/leaderboardAPI">back to top</a>)</p>
 
